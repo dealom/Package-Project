@@ -9,7 +9,7 @@ In this package, there are many files and folders but you should focus on the 'C
 
 To use this program, open the 'Code' folder, and run the main.py file.
 
-While using this program, please make sure to follow the instructions since the program needs correct inputs to run smoothly. Input 'Y','N','1', or '2' when given the option to and input an integer when specified.
+While using this program, please make sure to follow the instructions since the program needs correct inputs to run smoothly. Input 'Y','N','1', or '2' when prompted and input an integer when specified.
 
 If you want to take a deeper look in my code, you can open the 'PasswordFromScratch' and 'PasswordFromString' folders. If the file name has the word 'Interaction', that means that the code contains mainly inputs and print statements so the user can interact with the terminal. The other files contain functions and classes that this program needs in order to work.
 
