@@ -8,7 +8,7 @@ def improve():
         print("Fixing your password...")
         pw = password.fix()
         print(f'Your new password is: {pw}')
-        print("Your new password fulfills the common password requirement shown below.")
+        print("Your new password fulfills the common password requirements shown below.")
         npw = Pword(pw)
         g = npw.checklist()
     
@@ -26,15 +26,29 @@ def improve():
                 print("Invalid input! Try again!")
                 f = input("Input 1 or 2: ")
             if f=="1":
-                print("Enter a positive or negative integer representing the amount of letters to shift by.")
+                print("Enter a positive or negative integer between -25 and 25 representing the amount of letters to shift by.")
                 print("For example, entering -3 will change \'p\' to \'m\' and entering 2 will change \'p\' to \'r\'. ")
-                ashift = int(input("Enter an integer: "))
+                ashift = input("Enter an integer: ")
+                while type(ashift) is not int:
+                    try:
+                        ashift = int(ashift)
+                    except:
+                        print("Invalid input! Try again!")
+                        ashift = input("Enter an integer: ")
+
                 anewpw = alpharight(pw,ashift)
                 print(f"Your new password is: {anewpw}")
             elif f=="2":
-                print("Enter a positive or negative integer representing the amount of letters to shift by.")
+                print("Enter a positive or negative integer between -25 and 25 representing the amount of letters to shift by.")
                 print("For example, entering -3 will change \'p\' to \'u\' and entering 2 will change \'p\' to \'s\'. ")
                 kshift = int(input("Enter an integer: "))
+                while type(kshift) is not int:
+                    try:
+                        kshift = int(kshift)
+                    except:
+                        print("Invalid input! Try again!")
+                        kshift = input("Enter an integer: ")
+
                 knewpw = keyright(pw,kshift)
                 print(f"Your new password is: {knewpw}")
 
